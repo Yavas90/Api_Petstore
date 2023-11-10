@@ -1,0 +1,210 @@
+INFO     root:logger.py:9 Start Log **************************************************************
+INFO     root:logger.py:10 REQUEST METHOD: POST
+INFO     root:logger.py:11 STATUS CODE: 200
+INFO     root:logger.py:12 REQUEST URL: https://petstore.swagger.io/v2/user
+INFO     root:logger.py:13 REQUEST HEADERS: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '163'}
+INFO     root:logger.py:14 REQUEST BODY: {'id': 258, 'username': 'TestUser', 'firstName': 'Test', 'lastName': 'User', 'email': 'TestEmail', 'password': 'TestPass', 'phone': 'TestPhone', 'userStatus': 333}
+
+INFO     root:logger.py:15 STATUS CODE: 200
+INFO     root:logger.py:16 RESPONSE TIME: 740 ms
+
+INFO     root:logger.py:17 RESPONSE HEADERS: {'Date': 'Fri, 10 Nov 2023 14:48:52 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+INFO     root:logger.py:18 RESPONSE BODY: {"code":200,"type":"unknown","message":"258"}
+INFO     root:logger.py:19 End Log **************************************************************
+.
+.
+INFO     root:logger.py:9 Start Log **************************************************************
+INFO     root:logger.py:10 REQUEST METHOD: DELETE
+INFO     root:logger.py:11 STATUS CODE: 200
+INFO     root:logger.py:12 REQUEST URL: https://petstore.swagger.io/v2/user/TestUser
+INFO     root:logger.py:13 REQUEST HEADERS: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '0'}
+INFO     root:logger.py:14 REQUEST BODY: None
+
+INFO     root:logger.py:15 STATUS CODE: 200
+INFO     root:logger.py:16 RESPONSE TIME: 501 ms
+
+INFO     root:logger.py:17 RESPONSE HEADERS: {'Date': 'Fri, 10 Nov 2023 14:48:52 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+INFO     root:logger.py:18 RESPONSE BODY: {"code":200,"type":"unknown","message":"TestUser"}
+INFO     root:logger.py:19 End Log **************************************************************
+.
+.
+INFO     root:logger.py:9 Start Log **************************************************************
+INFO     root:logger.py:10 REQUEST METHOD: POST
+INFO     root:logger.py:11 STATUS CODE: 500
+INFO     root:logger.py:12 REQUEST URL: https://petstore.swagger.io/v2/user
+INFO     root:logger.py:13 REQUEST HEADERS: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '135'}
+INFO     root:logger.py:14 REQUEST BODY: {'id': True, 'username': True, 'firstName': True, 'lastName': True, 'email': True, 'password': True, 'phone': True, 'userStatus': True}
+
+INFO     root:logger.py:15 STATUS CODE: 500
+INFO     root:logger.py:16 RESPONSE TIME: 595 ms
+
+INFO     root:logger.py:17 RESPONSE HEADERS: {'Date': 'Fri, 10 Nov 2023 14:48:53 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+INFO     root:logger.py:18 RESPONSE BODY: {"code":500,"type":"unknown","message":"something bad happened"}
+INFO     root:logger.py:19 End Log **************************************************************
+.
+.
+INFO     root:logger.py:9 Start Log **************************************************************
+INFO     root:logger.py:10 REQUEST METHOD: POST
+INFO     root:logger.py:11 STATUS CODE: 200
+INFO     root:logger.py:12 REQUEST URL: https://petstore.swagger.io/v2/user
+INFO     root:logger.py:13 REQUEST HEADERS: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '163'}
+INFO     root:logger.py:14 REQUEST BODY: {'id': 258, 'username': 'TestUser', 'firstName': 'Test', 'lastName': 'User', 'email': 'TestEmail', 'password': 'TestPass', 'phone': 'TestPhone', 'userStatus': 333}
+
+INFO     root:logger.py:15 STATUS CODE: 200
+INFO     root:logger.py:16 RESPONSE TIME: 659 ms
+
+INFO     root:logger.py:17 RESPONSE HEADERS: {'Date': 'Fri, 10 Nov 2023 14:48:54 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+INFO     root:logger.py:18 RESPONSE BODY: {"code":200,"type":"unknown","message":"258"}
+INFO     root:logger.py:19 End Log **************************************************************
+.
+.
+INFO     root:logger.py:9 Start Log **************************************************************
+INFO     root:logger.py:10 REQUEST METHOD: PUT
+INFO     root:logger.py:11 STATUS CODE: 200
+INFO     root:logger.py:12 REQUEST URL: https://petstore.swagger.io/v2/user/TestUser
+INFO     root:logger.py:13 REQUEST HEADERS: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '174'}
+INFO     root:logger.py:14 REQUEST BODY: {'id': 10, 'user_name': 'UpdateUser', 'first_name': 'Update', 'last_name': 'User', 'email': 'UpdateEmail', 'password': 'UpdatePass', 'phone': 'UpdatePhone', 'user_status': 5}
+
+INFO     root:logger.py:15 STATUS CODE: 200
+INFO     root:logger.py:16 RESPONSE TIME: 863 ms
+
+INFO     root:logger.py:17 RESPONSE HEADERS: {'Date': 'Fri, 10 Nov 2023 14:48:54 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+INFO     root:logger.py:18 RESPONSE BODY: {"code":200,"type":"unknown","message":"10"}
+INFO     root:logger.py:19 End Log **************************************************************
+.
+.
+INFO     root:logger.py:9 Start Log **************************************************************
+INFO     root:logger.py:10 REQUEST METHOD: DELETE
+INFO     root:logger.py:11 STATUS CODE: 200
+INFO     root:logger.py:12 REQUEST URL: https://petstore.swagger.io/v2/user/TestUser
+INFO     root:logger.py:13 REQUEST HEADERS: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '0'}
+INFO     root:logger.py:14 REQUEST BODY: None
+
+INFO     root:logger.py:15 STATUS CODE: 200
+INFO     root:logger.py:16 RESPONSE TIME: 812 ms
+
+INFO     root:logger.py:17 RESPONSE HEADERS: {'Date': 'Fri, 10 Nov 2023 14:48:55 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+INFO     root:logger.py:18 RESPONSE BODY: {"code":200,"type":"unknown","message":"TestUser"}
+INFO     root:logger.py:19 End Log **************************************************************
+.
+.
+INFO     root:logger.py:9 Start Log **************************************************************
+INFO     root:logger.py:10 REQUEST METHOD: PUT
+INFO     root:logger.py:11 STATUS CODE: 500
+INFO     root:logger.py:12 REQUEST URL: https://petstore.swagger.io/v2/user/True
+INFO     root:logger.py:13 REQUEST HEADERS: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '143'}
+INFO     root:logger.py:14 REQUEST BODY: {'id': '№', 'user_name': True, 'first_name': True, 'last_name': True, 'email': True, 'password': True, 'phone': True, 'user_status': True}
+
+INFO     root:logger.py:15 STATUS CODE: 500
+INFO     root:logger.py:16 RESPONSE TIME: 911 ms
+
+INFO     root:logger.py:17 RESPONSE HEADERS: {'Date': 'Fri, 10 Nov 2023 14:48:56 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+INFO     root:logger.py:18 RESPONSE BODY: {"code":500,"type":"unknown","message":"something bad happened"}
+INFO     root:logger.py:19 End Log **************************************************************
+.
+.
+INFO     root:logger.py:9 Start Log **************************************************************
+INFO     root:logger.py:10 REQUEST METHOD: POST
+INFO     root:logger.py:11 STATUS CODE: 200
+INFO     root:logger.py:12 REQUEST URL: https://petstore.swagger.io/v2/user
+INFO     root:logger.py:13 REQUEST HEADERS: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '163'}
+INFO     root:logger.py:14 REQUEST BODY: {'id': 258, 'username': 'TestUser', 'firstName': 'Test', 'lastName': 'User', 'email': 'TestEmail', 'password': 'TestPass', 'phone': 'TestPhone', 'userStatus': 333}
+
+INFO     root:logger.py:15 STATUS CODE: 200
+INFO     root:logger.py:16 RESPONSE TIME: 806 ms
+
+INFO     root:logger.py:17 RESPONSE HEADERS: {'Date': 'Fri, 10 Nov 2023 14:48:57 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+INFO     root:logger.py:18 RESPONSE BODY: {"code":200,"type":"unknown","message":"258"}
+INFO     root:logger.py:19 End Log **************************************************************
+.
+.
+INFO     root:logger.py:9 Start Log **************************************************************
+INFO     root:logger.py:10 REQUEST METHOD: GET
+INFO     root:logger.py:11 STATUS CODE: 200
+INFO     root:logger.py:12 REQUEST URL: https://petstore.swagger.io/v2/user/TestUser
+INFO     root:logger.py:13 REQUEST HEADERS: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json'}
+INFO     root:logger.py:14 REQUEST BODY: None
+
+INFO     root:logger.py:15 STATUS CODE: 200
+INFO     root:logger.py:16 RESPONSE TIME: 816 ms
+
+INFO     root:logger.py:17 RESPONSE HEADERS: {'Date': 'Fri, 10 Nov 2023 14:48:58 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+INFO     root:logger.py:18 RESPONSE BODY: {"id":258,"username":"TestUser","firstName":"Test","lastName":"User","email":"TestEmail","password":"TestPass","phone":"TestPhone","userStatus":333}
+INFO     root:logger.py:19 End Log **************************************************************
+.
+.
+INFO     root:logger.py:9 Start Log **************************************************************
+INFO     root:logger.py:10 REQUEST METHOD: DELETE
+INFO     root:logger.py:11 STATUS CODE: 200
+INFO     root:logger.py:12 REQUEST URL: https://petstore.swagger.io/v2/user/TestUser
+INFO     root:logger.py:13 REQUEST HEADERS: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '0'}
+INFO     root:logger.py:14 REQUEST BODY: None
+
+INFO     root:logger.py:15 STATUS CODE: 200
+INFO     root:logger.py:16 RESPONSE TIME: 721 ms
+
+INFO     root:logger.py:17 RESPONSE HEADERS: {'Date': 'Fri, 10 Nov 2023 14:48:59 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+INFO     root:logger.py:18 RESPONSE BODY: {"code":200,"type":"unknown","message":"TestUser"}
+INFO     root:logger.py:19 End Log **************************************************************
+.
+.
+INFO     root:logger.py:9 Start Log **************************************************************
+INFO     root:logger.py:10 REQUEST METHOD: GET
+INFO     root:logger.py:11 STATUS CODE: 404
+INFO     root:logger.py:12 REQUEST URL: https://petstore.swagger.io/v2/user/True
+INFO     root:logger.py:13 REQUEST HEADERS: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json'}
+INFO     root:logger.py:14 REQUEST BODY: None
+
+INFO     root:logger.py:15 STATUS CODE: 404
+INFO     root:logger.py:16 RESPONSE TIME: 897 ms
+
+INFO     root:logger.py:17 RESPONSE HEADERS: {'Date': 'Fri, 10 Nov 2023 14:48:59 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+INFO     root:logger.py:18 RESPONSE BODY: {"code":1,"type":"error","message":"User not found"}
+INFO     root:logger.py:19 End Log **************************************************************
+.
+.
+INFO     root:logger.py:9 Start Log **************************************************************
+INFO     root:logger.py:10 REQUEST METHOD: POST
+INFO     root:logger.py:11 STATUS CODE: 200
+INFO     root:logger.py:12 REQUEST URL: https://petstore.swagger.io/v2/user
+INFO     root:logger.py:13 REQUEST HEADERS: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '163'}
+INFO     root:logger.py:14 REQUEST BODY: {'id': 258, 'username': 'TestUser', 'firstName': 'Test', 'lastName': 'User', 'email': 'TestEmail', 'password': 'TestPass', 'phone': 'TestPhone', 'userStatus': 333}
+
+INFO     root:logger.py:15 STATUS CODE: 200
+INFO     root:logger.py:16 RESPONSE TIME: 849 ms
+
+INFO     root:logger.py:17 RESPONSE HEADERS: {'Date': 'Fri, 10 Nov 2023 14:49:00 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+INFO     root:logger.py:18 RESPONSE BODY: {"code":200,"type":"unknown","message":"258"}
+INFO     root:logger.py:19 End Log **************************************************************
+.
+.
+INFO     root:logger.py:9 Start Log **************************************************************
+INFO     root:logger.py:10 REQUEST METHOD: DELETE
+INFO     root:logger.py:11 STATUS CODE: 200
+INFO     root:logger.py:12 REQUEST URL: https://petstore.swagger.io/v2/user/TestUser
+INFO     root:logger.py:13 REQUEST HEADERS: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '0'}
+INFO     root:logger.py:14 REQUEST BODY: None
+
+INFO     root:logger.py:15 STATUS CODE: 200
+INFO     root:logger.py:16 RESPONSE TIME: 891 ms
+
+INFO     root:logger.py:17 RESPONSE HEADERS: {'Date': 'Fri, 10 Nov 2023 14:49:01 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+INFO     root:logger.py:18 RESPONSE BODY: {"code":200,"type":"unknown","message":"TestUser"}
+INFO     root:logger.py:19 End Log **************************************************************
+.
+.
+INFO     root:logger.py:9 Start Log **************************************************************
+INFO     root:logger.py:10 REQUEST METHOD: DELETE
+INFO     root:logger.py:11 STATUS CODE: 404
+INFO     root:logger.py:12 REQUEST URL: https://petstore.swagger.io/v2/user/True
+INFO     root:logger.py:13 REQUEST HEADERS: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '0'}
+INFO     root:logger.py:14 REQUEST BODY: None
+
+INFO     root:logger.py:15 STATUS CODE: 404
+INFO     root:logger.py:16 RESPONSE TIME: 786 ms
+
+INFO     root:logger.py:17 RESPONSE HEADERS: {'Date': 'Fri, 10 Nov 2023 14:49:02 GMT', 'Content-Length': '0', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+INFO     root:logger.py:18 RESPONSE BODY: 
+INFO     root:logger.py:19 End Log **************************************************************
+.
+.
