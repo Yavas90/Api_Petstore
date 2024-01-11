@@ -1,4 +1,5 @@
 import requests
+import allure
 from jsonschema import validate
 from helper.logger import log
 from typing import Union
@@ -30,24 +31,27 @@ class BaseApi:
 
     def get(self, endpoint: str, id: int):
         url = BASE_URL
-        self.response = requests.get(url=f"{url}{endpoint}{id}",
-                                     headers=self.HEADERS)
+        with allure.step(f"GET запрос на url: {url}{endpoint}"):
+            self.response = requests.get(url=f"{url}{endpoint}{id}",
+                                         headers=self.HEADERS)
         log(response=self.response)
         return self
 
     def post(self, endpoint: str, headers: dict = None, json: dict = None):
         url = BASE_URL
-        self.response = requests.post(url=f"{url}{endpoint}",
-                                      headers=headers,
-                                      json=json)
+        with allure.step(f"POST запрос на url: {url}{endpoint}\n тело запроса: \n {json}"):
+            self.response = requests.post(url=f"{url}{endpoint}",
+                                          headers=headers,
+                                          json=json)
         log(self.response, request_body=json)
         return self
 
     def put(self, endpoint: str, headers: dict = None, json: dict = None):
         url = BASE_URL
-        self.response = requests.put(url=f"{url}{endpoint}",
-                                     headers=headers,
-                                     json=json)
+        with allure.step(f"PUT запрос на url: {url}{endpoint}\n тело запроса: \n {json}"):
+            self.response = requests.put(url=f"{url}{endpoint}",
+                                         headers=headers,
+                                         json=json)
         log(self.response, request_body=json)
         return self
 
@@ -96,8 +100,8 @@ class BaseApi:
     def json_representation(self) -> Union[ResponseModel, list]:
         payload = self.get_payload([], decode=True)
         return ResponseModel(code=payload['code'],
-                                 type=payload['type'],
-                                 message=payload['message'])
+                             type=payload['type'],
+                             message=payload['message'])
 
     def json_representation_user(self) -> Union[RequestCreateUserModel, list]:
         payload = self.get_payload([], decode=True)

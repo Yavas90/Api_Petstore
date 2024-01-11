@@ -1,4 +1,5 @@
 import pytest
+import allure
 from data.pet_data.pet_data import (add_pet_valid, response_add_pet_valid, add_pet_no_valid, response_add_pet_no_valid,
                                     response_get_pet_no_valid, update_pet_valid, response_update_pet_valid,
                                     update_pet_no_valid)
@@ -8,6 +9,7 @@ from fixture.pet_fixture import delete_pet_valid_fixture, create_pet_valid_fixtu
 pytest_plugins = ["fixture.pet_fixture"]
 
 
+@allure.feature("pet_test")
 @pytest.mark.parametrize("add_pet_val", [add_pet_valid])
 def test_add_pet_with_valid_params(pet_api, add_pet_val, delete_pet_valid_fixture):
     pet_api.add_pet_to_store(add_pet_val)
@@ -17,6 +19,7 @@ def test_add_pet_with_valid_params(pet_api, add_pet_val, delete_pet_valid_fixtur
     delete_pet_valid_fixture(add_pet_valid.id)
 
 
+@allure.feature("pet_test")
 @pytest.mark.parametrize("add_pet_no_val", [add_pet_no_valid])
 def test_add_pet_with_no_valid_params(pet_api, add_pet_no_val):
     pet_api.add_pet_to_store(add_pet_no_val)
@@ -25,6 +28,7 @@ def test_add_pet_with_no_valid_params(pet_api, add_pet_no_val):
     pet_api.assert_objects_is_equal(response_add_pet_no_valid, pet_api.json_representation())
 
 
+@allure.feature("pet_test")
 @pytest.mark.parametrize("add_pet_val", [add_pet_valid])
 def test_get_pet_with_valid_id(pet_api, create_pet_valid_fixture, add_pet_val,
                                delete_pet_valid_fixture):
@@ -36,6 +40,7 @@ def test_get_pet_with_valid_id(pet_api, create_pet_valid_fixture, add_pet_val,
     delete_pet_valid_fixture(add_pet_val.id)
 
 
+@allure.feature("pet_test")
 def test_get_pet_with_no_valid_id(pet_api):
     pet_api.get_pet(add_pet_no_valid.id)
     pet_api.status_code_should_be(404)
@@ -43,6 +48,7 @@ def test_get_pet_with_no_valid_id(pet_api):
     pet_api.assert_objects_is_equal(response_get_pet_no_valid, pet_api.json_representation())
 
 
+@allure.feature("pet_test")
 @pytest.mark.parametrize("add_pet_val", [add_pet_valid])
 @pytest.mark.parametrize("update_pet_val", [update_pet_valid])
 def test_update_pet_with_valid_id_and_params(pet_api, update_pet_val, add_pet_val,
@@ -55,6 +61,7 @@ def test_update_pet_with_valid_id_and_params(pet_api, update_pet_val, add_pet_va
     delete_pet_valid_fixture(add_pet_val.id)
 
 
+@allure.feature("pet_test")
 @pytest.mark.parametrize("add_pet_val", [add_pet_valid])
 @pytest.mark.parametrize("update_pet_no_val", [update_pet_no_valid])
 def test_update_pet_with_no_valid_id_and_params(pet_api, add_pet_val, update_pet_no_val):
@@ -64,6 +71,7 @@ def test_update_pet_with_no_valid_id_and_params(pet_api, add_pet_val, update_pet
     pet_api.assert_objects_is_equal(response_get_pet_no_valid, pet_api.json_representation())
 
 
+@allure.feature("pet_test")
 @pytest.mark.parametrize("add_pet_val", [add_pet_valid])
 def test_delete_pet_with_valid_id(pet_api, create_pet_valid_fixture, add_pet_val):
     create_pet_valid_fixture(add_pet_val)
@@ -73,6 +81,7 @@ def test_delete_pet_with_valid_id(pet_api, create_pet_valid_fixture, add_pet_val
     pet_api.assert_objects_is_equal(response_update_pet_valid, pet_api.json_representation())
 
 
+@allure.feature("pet_test")
 def test_delete_pet_with_no_valid_id(pet_api):
     pet_api.delete_pet(add_pet_no_valid.id)
     pet_api.status_code_should_be(404)
