@@ -13,9 +13,6 @@ jobs:
       - name: Install venv
         uses: python3.11 -m venv env
 
-      - name: Activate source
-        uses: source env/bin/activate
-
       - name: setup Python
         uses: actions/setup-python@v4
         with:
