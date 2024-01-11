@@ -12,6 +12,7 @@ on:
           - pet_test
           - store_test
           - user_test
+          - all_test
 
 jobs:
   test:
@@ -40,3 +41,7 @@ jobs:
       - name: Run user tests
         if: "github.event.inputs.deployment_target == 'user_test'"
         run: pytest test/test_user.py
+
+      - name: Run user tests
+        if: "github.event.inputs.deployment_target == 'all_test'"
+        run: pytest
