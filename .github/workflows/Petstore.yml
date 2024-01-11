@@ -48,6 +48,3 @@ jobs:
 
       - name: Generate allure report
         run: pytest -v -s --alluredir results
-
-      - name: Show allure report
-        run: allure serve results
