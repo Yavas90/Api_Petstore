@@ -45,3 +45,9 @@ jobs:
       - name: Run all tests
         if: "github.event.inputs.deployment_target == 'all_test'"
         run: pytest
+
+      - name: Generate allure report
+        run: pytest -v -s --alluredir results
+
+      - name: Show allure report
+        run: allure serve results
