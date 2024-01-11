@@ -10,9 +10,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install venv
-        uses: python3.11 -m venv env
-
       - name: setup Python
         uses: actions/setup-python@v4
         with:
