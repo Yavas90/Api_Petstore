@@ -1,7 +1,8 @@
 import pytest
 from data.pet_data.pet_data import (add_pet_valid, response_add_pet_valid, add_pet_no_valid, response_add_pet_no_valid,
-                                    response_get_pet_no_valid, update_pet_valid, response_update_pet_valid, update_pet_no_valid)
-from schema.pet_schemas import GET_POST_SCHEMA, GET_UPD_DEL_ERROR_SCHEMA
+                                    response_get_pet_no_valid, update_pet_valid, response_update_pet_valid,
+                                    update_pet_no_valid)
+from schemas.pet_schemas import GET_POST_SCHEMA, GET_UPD_DEL_ERROR_SCHEMA
 from fixture.pet_fixture import delete_pet_valid_fixture, create_pet_valid_fixture
 
 pytest_plugins = ["fixture.pet_fixture"]

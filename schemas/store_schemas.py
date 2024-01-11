@@ -1,6 +1,6 @@
 
 STORE_SCHEMA = {
-    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$schemas": "http://json-schema.org/draft-04/schema#",
     "type": "object",
     "properties": {
         "id": {"type": "integer"},
@@ -13,7 +13,7 @@ STORE_SCHEMA = {
 }
 
 ERROR_DELETE_STORE_SCHEMA = {
-    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$schemas": "http://json-schema.org/draft-04/schema#",
     "type": "object",
     "properties": {
         "code": {"type": "integer"},

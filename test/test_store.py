@@ -2,7 +2,7 @@ import pytest
 from data.store_data.store_data import (create_order_valid, create_order_no_valid, response_create_order_valid,
                                         response_create_order_no_valid, response_find_valid, response_find_no_valid,
                                         response_delete_valid, response_delete_no_valid)
-from schema.store_schemas import STORE_SCHEMA, ERROR_DELETE_STORE_SCHEMA
+from schemas.store_schemas import STORE_SCHEMA, ERROR_DELETE_STORE_SCHEMA
 from fixture.store_fixture import create_place_order_fixture, delete_place_order_fixture
 
 pytest_plugins = ["fixture.store_fixture"]

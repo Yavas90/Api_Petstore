@@ -1,7 +1,7 @@
 """Схемы ответа по pet"""
 
 GET_POST_SCHEMA = {
-    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$schemas": "http://json-schema.org/draft-04/schema#",
     "type": "object",
     "properties": {
         "id": {"type": "integer"},
@@ -29,7 +29,7 @@ GET_POST_SCHEMA = {
 }
 
 GET_UPD_DEL_ERROR_SCHEMA = {
-    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$schemas": "http://json-schema.org/draft-04/schema#",
     "type": "object",
     "properties": {
         "code": {"type": "integer"},
@@ -39,7 +39,7 @@ GET_UPD_DEL_ERROR_SCHEMA = {
 }
 
 POST_EMPTY_SCHEMA = {
-    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$schemas": "http://json-schema.org/draft-04/schema#",
     "type": "object",
     "properties": {
         "id": {"type": "integer"},

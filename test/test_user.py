@@ -3,7 +3,7 @@ from data.user_data.user_data import (create_user_valid, response_user_valid, cr
                                       update_user_valid, response_update_valid, update_user_no_valid, response_update_no_valid,
                                       response_get_valid, response_get_no_valid, response_valid_del_user)
 from fixture.user_fixture import create_user_valid_fixture, delete_user_valid_fixture
-from schema.user_schemas import CREATE_UPDATE_GET_USER_SCHEMA, DELETE_ERROR_USER_SCHEMA
+from schemas.user_schemas import CREATE_UPDATE_GET_USER_SCHEMA, DELETE_ERROR_USER_SCHEMA
 
 pytest_plugins = ["fixture.user_fixture"]
 

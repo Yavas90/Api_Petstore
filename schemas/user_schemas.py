@@ -1,5 +1,5 @@
 CREATE_UPDATE_GET_USER_SCHEMA = {
-    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$schemas": "http://json-schema.org/draft-04/schema#",
     "type": "object",
     "properties": {
         "id": {"type": "integer"},
@@ -14,7 +14,7 @@ CREATE_UPDATE_GET_USER_SCHEMA = {
 }
 
 DELETE_ERROR_USER_SCHEMA = {
-    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$schemas": "http://json-schema.org/draft-04/schema#",
     "type": "object",
     "properties": {
         "code": {"type": "integer"},
