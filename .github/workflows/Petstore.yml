@@ -1,6 +1,17 @@
 name: Auto test
 
-on: push
+on:
+  workflow_dispatch:
+    inputs:
+      deployment_target:
+        description: Choose target
+        required: true
+        default:
+        type: choice
+        options:
+          - pet_test
+          - store_test
+          - user_test
 
 jobs:
   test:
@@ -18,5 +29,14 @@ jobs:
       - name: install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run tests
-        run: pytest
+      - name: Run pet tests
+        if: "github.event.inputs.deployment_target == 'pet_test'"
+        run: pytest test\test_pet.py
+
+      - name: Run store tests
+        if: "github.event.inputs.deployment_target == 'store_test'"
+        run: pytest test\test_store.py
+
+      - name: Run user tests
+        if: "github.event.inputs.deployment_target == 'user_test'"
+        run: pytest test\test_user.py
