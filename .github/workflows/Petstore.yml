@@ -2,7 +2,7 @@ name: Auto test
 
 on:
   schedule:
-    - cron: "*/5  * * * * command"
+    - cron: "*/5  * * * *"
   workflow_dispatch:
     inputs:
       deployment_target:
