@@ -2,7 +2,7 @@ name: Schedule
 
 on:
   schedule:
-#    - cron: "*/5  * * * *" Каждые 15 мин, убрать решетку и сделать коммит
+    - cron:
 
 jobs:
   test:
