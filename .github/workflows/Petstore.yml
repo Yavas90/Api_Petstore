@@ -32,16 +32,58 @@ jobs:
 
       - name: Run pet tests
         if: "github.event.inputs.deployment_target == 'pet_test'"
-        run: pytest test/test_pet.py
+        run: pytest test/test_pet.py --alluredir=allure-result
 
       - name: Run store tests
         if: "github.event.inputs.deployment_target == 'store_test'"
-        run: pytest test/test_store.py
+        run: pytest test/test_store.py --alluredir=allure-result
 
       - name: Run user tests
         if: "github.event.inputs.deployment_target == 'user_test'"
-        run: pytest test/test_user.py
+        run: pytest test/test_user.py --alluredir=allure-result
 
       - name: Run all tests
         if: "github.event.inputs.deployment_target == 'all_test'"
-        run: pytest
+        run: pytest --alluredir=allure-result
+
+      - name: Store allure result
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure-result
+          path:
+            allure-result
+          retention-days: 1
+
+  generate-report:
+    runs-on: ubuntu-latest
+    needs: test
+    name: Generate report
+    steps:
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'microsoft'
+          java-version: '17'
+      - run: sudo wget https://github.com/allure-framework/allure2/releases/download/2.23.1/allure-2.23.1.tgz && sudo tar -zxvf allure-2.23.1.tgz -C /opt/ && sudo ln -s /opt/allure-2.23.1/bin/allure /usr/bin/allure
+      - name: Download all workflow run artifacts
+        uses: actions/download-artifact@v3
+      - run: allure generate -c allure-result -o _site
+      - name: Store generated report
+        uses: actions/upload-artifact@v3
+        with:
+          name: _site
+          path:
+            _site
+          retention-days: 1
+
+  publish-report:
+    runs-on: ubuntu-latest
+    needs: generate-report
+    name: Publish report
+    steps:
+      - name: Download all workflow run artifacts
+        uses: actions/download-artifact@v3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v2
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1.2.9
