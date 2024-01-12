@@ -2,13 +2,13 @@ name: Auto test
 
 on:
   schedule:
-    - cron: "*/5  * * * *"
+    - cron: "*/5  * * * * command"
   workflow_dispatch:
     inputs:
       deployment_target:
         description: Choose target
         required: true
-        default:
+        default: all_test
         type: choice
         options:
           - pet_test
