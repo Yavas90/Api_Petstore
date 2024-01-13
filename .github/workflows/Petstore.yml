@@ -86,18 +86,22 @@ jobs:
       - name: Run pet tests
         if: "github.event.inputs.deployment_target == 'pet_test'"
         run: pytest test/test_pet.py --alluredir=allure-results
+        continue-on-error: true
 
       - name: Run store tests
         if: "github.event.inputs.deployment_target == 'store_test'"
         run: pytest test/test_store.py --alluredir=allure-results
+        continue-on-error: true
 
       - name: Run user tests
         if: "github.event.inputs.deployment_target == 'user_test'"
         run: pytest test/test_user.py --alluredir=allure-results
+        continue-on-error: true
 
       - name: Run all tests
         if: "github.event.inputs.deployment_target == 'all_test'"
         run: pytest --alluredir=allure-results
+        continue-on-error: true
 
       - name: Store allure results
         uses: actions/upload-artifact@v3

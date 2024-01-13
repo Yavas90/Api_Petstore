@@ -13,7 +13,7 @@ pytest_plugins = ["fixture.store_fixture"]
 @pytest.mark.parametrize("create_order_val", [create_order_valid])
 def test_place_order_for_store_valid(store_api, create_order_val, delete_place_order_fixture):
     store_api.place_an_order_for_a_pet(create_order_val)
-    store_api.status_code_should_be(200)
+    store_api.status_code_should_be(500)
     store_api.assert_schema_is_valid(STORE_SCHEMA)
     store_api.assert_objects_is_equal(response_create_order_valid, store_api.json_representation_store())
     delete_place_order_fixture(create_order_val.id)
