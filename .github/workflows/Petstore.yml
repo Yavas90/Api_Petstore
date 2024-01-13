@@ -1,5 +1,6 @@
 name: Auto test
 
+
 on:
   workflow_dispatch:
     inputs:
@@ -20,6 +21,10 @@ permissions:
   id-token: write
 
 jobs:
+  download-history:
+    runs-on: ubuntu-latest
+    name: Download history
+
   test:
     runs-on: ubuntu-latest
 
@@ -37,24 +42,24 @@ jobs:
 
       - name: Run pet tests
         if: "github.event.inputs.deployment_target == 'pet_test'"
-        run: pytest test/test_pet.py --alluredir=allure-result
+        run: pytest test/test_pet.py --alluredir=allure-results
 
       - name: Run store tests
         if: "github.event.inputs.deployment_target == 'store_test'"
-        run: pytest test/test_store.py --alluredir=allure-result
+        run: pytest test/test_store.py --alluredir=allure-results
 
       - name: Run user tests
         if: "github.event.inputs.deployment_target == 'user_test'"
-        run: pytest test/test_user.py --alluredir=allure-result
+        run: pytest test/test_user.py --alluredir=allure-results
 
       - name: Run all tests
         if: "github.event.inputs.deployment_target == 'all_test'"
-        run: pytest --alluredir=allure-result
+        run: pytest --alluredir=allure-results
 
-      - name: Store allure result
+      - name: Store allure results
         uses: actions/upload-artifact@v3
         with:
-          name: allure-result
+          name: allure-results
           path:
             allure-result
           retention-days: 1
@@ -71,7 +76,7 @@ jobs:
       - run: sudo wget https://github.com/allure-framework/allure2/releases/download/2.23.1/allure-2.23.1.tgz && sudo tar -zxvf allure-2.23.1.tgz -C /opt/ && sudo ln -s /opt/allure-2.23.1/bin/allure /usr/bin/allure
       - name: Download all workflow run artifacts
         uses: actions/download-artifact@v3
-      - run: allure generate -c allure-result -o _site
+      - run: allure generate -c allure-results -o _site
       - name: Store generated report
         uses: actions/upload-artifact@v3
         with:
